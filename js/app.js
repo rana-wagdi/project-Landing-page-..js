@@ -1,6 +1,7 @@
 const toggleButton=document.getElementsByClassName('toggle-button')[0]
 const navLinks= document.getElementsByClassName('navLink')[0]
 const links = document.querySelectorAll('.navbarLink');
+const header = document.querySelector('.navbar')
 
 toggleButton.addEventListener('click',()=> {
     navLinks.classList.toggle('active')
@@ -46,3 +47,13 @@ for (const link of links) {
     let windoPosition = window.scrollY > 0
       nav.classList.toggle('scrolling.active',windoPosition);
   })
+  window.onscroll = function(){
+      var top = window.scrollY;
+    console.log(top);
+    if(top >= 200){
+        header.classList.add('active');
+     } else {
+        header.classList.remove('active')
+    }
+    }
+    

@@ -80,16 +80,14 @@ body{
     border-radius: 10px;
 }
 
-/*style after scroll*/
 
-.scrolling.active{
-    background-color: yellow;
-    box-shadow: 0 3px 1rem rgba(0,0,0,1);
-    height: 6.6rem;
+.navbar.active {
+    background-color: #28394d;
+
 }
 
 
-.scrolling.active .navbarLink{
+.navbarLink .scrolling.active {
     color: royalblue;
 }
 
