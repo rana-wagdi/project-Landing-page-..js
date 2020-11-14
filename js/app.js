@@ -42,11 +42,6 @@ for (const link of links) {
     });
   }
   //
-  window.addEventListener('scroll',function(){
-      let nav = document.querySelector('.navbar');
-    let windoPosition = window.scrollY > 0
-      nav.classList.toggle('scrolling.active',windoPosition);
-  })
   window.onscroll = function(){
       var top = window.scrollY;
     console.log(top);
@@ -57,3 +52,6 @@ for (const link of links) {
     }
     }
     
+
+
+

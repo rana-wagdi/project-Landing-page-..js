@@ -35,7 +35,7 @@ body{
 }
 .navbarList{
     margin: 0px;
-    padding:.5rem 6rem;
+    padding:.5rem 5.5rem;
     display: flex;
 }
 .navbarItem{
@@ -57,6 +57,7 @@ body{
 .navbarItem:hover{
     background-color: #bd9598;
     transition: .5s;
+    border: solid;
 }
 
 /**.navbarLink.active,.navbarLink:hover{
@@ -83,6 +84,7 @@ body{
 
 .navbar.active {
     background-color: #28394d;
+    transition: all 1s;
 
 }
 
