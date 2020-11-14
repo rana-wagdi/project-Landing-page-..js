@@ -4,6 +4,24 @@ const links = document.querySelectorAll('.navbarLink');
 
 toggleButton.addEventListener('click',()=> {
     navLinks.classList.toggle('active')
+}) 
+//
+window.addEventListener('scroll',event =>{
+    let navigationLinks=document.querySelectorAll('.navbarLink');
+    let fromTop=window.scrollY;
+
+    navigationLinks.forEach(link =>{
+        let section = document.querySelector(link.hash);
+
+        if(
+            section.offsetTop <= fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop 
+        ){
+            link.classList.add('active');
+        } else{
+            link.classList.remove('active');
+        }
+    })
 })
 
 
@@ -11,12 +29,12 @@ toggleButton.addEventListener('click',()=> {
 for (const link of links) {
     link.addEventListener("click", clickHandler);
   }
-  
+
   function clickHandler(e) {
     e.preventDefault();
     const href = this.getAttribute("href");
     const offsetTop = document.querySelector(href).offsetTop;
-  
+
     scroll({
       top: offsetTop,
       behavior: "smooth"
