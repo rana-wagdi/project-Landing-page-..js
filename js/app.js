@@ -1,11 +1,20 @@
-const toggleButton=document.getElementsByClassName('toggle-button')[0]
+const toggleButton=document.querySelector('.toggle-button')
 const navLinks= document.getElementsByClassName('navLink')[0]
 const links = document.querySelectorAll('.navbarLink');
 const header = document.querySelector('.navbar')
 
-toggleButton.addEventListener('click',()=> {
-    navLinks.classList.toggle('active')
-}) 
+$(document).ready(function(){
+    $('.toggle-button').click(function(){
+        $('.navLink').toggleClass('active')
+    })
+    $('ul li').click(function(){
+        $(this).siblings().removeClass('active');
+        $(this).toggleClass('active');
+    })
+})
+//toggleButton.addEventListener('click',()=> {
+  //  navLinks.classList.toggle('active')
+//}) 
 //
 window.addEventListener('scroll',event =>{
     let navigationLinks=document.querySelectorAll('.navbarLink');
