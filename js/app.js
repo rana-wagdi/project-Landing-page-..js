@@ -7,11 +7,12 @@ $(document).ready(function(){
     $('.toggle-button').click(function(){
         $('.navLink').toggleClass('active')
     })
-    $('ul li').click(function(){
+    $('.navbarLink').click(function(){
         $(this).siblings().removeClass('active');
         $(this).toggleClass('active');
     })
 })
+
 //toggleButton.addEventListener('click',()=> {
   //  navLinks.classList.toggle('active')
 //}) 
