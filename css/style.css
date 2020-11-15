@@ -92,6 +92,29 @@ body{
 .navbarLink .scrolling.active {
     color: royalblue;
 }
+#section1{
+    background-color: white;
+}
+#section2{
+    background-color: #c4c2c3;
+    width: 100%;
+}
+
+#section4{
+    background-color: #bd9598;
+    width: 100%;
+}
+section{
+    background-color: wheat;
+    width: 75%;
+     padding: 50px 18px; 
+     margin: 80px 0;
+     font-size: 20px;
+     
+}
+section strong{
+    font-weight:bolder;
+}
 
 @media (max-width:800px){
     .toggle-button{
