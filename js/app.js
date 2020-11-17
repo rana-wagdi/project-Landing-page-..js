@@ -3,6 +3,16 @@ const navLinks= document.getElementsByClassName('navLink')[0]
 const links = document.querySelectorAll('.navbarLink');
 const header = document.querySelector('.navbar')
 
+links.forEach((item) =>{
+    item.addEventListener("click", ()=>{
+        const el = document.getElementById(item.getAttribute("data-link"));
+        el.scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        })
+    })
+})
+
 $(document).ready(function(){
     $('.toggle-button').click(function(){
         $('.navLink').toggleClass('active')
