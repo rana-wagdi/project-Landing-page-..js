@@ -31,17 +31,18 @@ window.addEventListener('scroll',event =>{
     let navigationLinks=document.querySelectorAll('.navbarLink');
     let fromTop=window.scrollY;
 
-    navigationLinks.forEach(link =>{
-        let section = document.querySelector(link.hash);
-
-        if(
-            section.offsetTop <= fromTop &&
-            section.offsetTop + section.offsetHeight > fromTop 
-        ){
-            link.classList.add('active');
-        } else{
-            link.classList.remove('active');
-        }
+    navigationLinks.forEach((link) => {
+    if (link.hash != "" && link.hash != "#") {
+      let section = document.querySelector(link.hash);
+      if (
+        section.offsetTop <= fromTop &&
+        section.offsetTop + section.offsetHeight > fromTop
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    }
     })
 })
 
