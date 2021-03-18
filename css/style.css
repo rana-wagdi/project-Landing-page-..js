@@ -123,6 +123,9 @@ section strong{
 }
 
 @media (max-width:800px){
+    p{
+        width: 100%;
+    }
     .toggle-button{
         display: flex;
         align-items: center;
